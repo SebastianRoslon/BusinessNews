@@ -9,13 +9,12 @@ import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 
-@Slf4j
 @Component
 public class NewsClient {
 
     private final RestTemplate restTemplate = new RestTemplate();
 
-    public NewsDto getBuisnessNews() {
+    public NewsDto getBusinessNews() {
         NewsDto newsDto = callGetMethod();
         return NewsDto.builder()
                 .articles(newsDto.getArticles())
@@ -23,17 +22,21 @@ public class NewsClient {
     }
 
     public String fileWriter() {
-        String buisnessNewsToString = String.valueOf(getBuisnessNews());
-        String fileName = "test.txt";
+        String businessNewsToString = String.valueOf(getBusinessNews());
+        String[] businessArray = businessNewsToString.split("ArticlesDto");
+
+        String fileName = "BusinessArticlesPoland.txt";
         try (
                 var fileWriter = new FileWriter(fileName);
-                var writer = new BufferedWriter(fileWriter);
-        ) {
-            writer.write(buisnessNewsToString);
-            writer.newLine();
+                var writer = new BufferedWriter(fileWriter)
+                ) {
+            for (String s : businessArray) {
+                writer.write(s);
+                writer.newLine();
+            }
 
         } catch (IOException e) {
-            System.err.println("Nie udało się zapisać pliku " + fileName);
+            System.err.println("Failed to write file " + fileName);
         }
         return fileName;
     }

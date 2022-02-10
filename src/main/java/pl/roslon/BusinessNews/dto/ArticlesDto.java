@@ -3,7 +3,6 @@ package pl.roslon.BusinessNews.dto;
 import lombok.Data;
 import lombok.Getter;
 
-@Data
 @Getter
 public class ArticlesDto {
 
@@ -11,4 +10,12 @@ public class ArticlesDto {
     private String description;
     private String author;
 
+    @Override
+    public String toString() {
+        return "ArticlesDto{" +
+                "title: " + title + '\'' +
+                ", description: " + description + '\'' +
+                ", author" + author + '\'' +
+                '}';
+    }
 }

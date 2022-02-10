@@ -12,10 +12,9 @@ public class NewsController {
 
     private final NewsClient newsClient;
 
-
     @GetMapping("/news")
     public NewsDto getNews(){
-        return newsClient.getBuisnessNews();
+        return newsClient.getBusinessNews();
     }
 
     @GetMapping("/file")
