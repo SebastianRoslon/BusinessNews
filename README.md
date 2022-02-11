@@ -6,7 +6,7 @@ https://newsapi.org and save it to file.
 Application is using Java 14, Spring Boot, Maven, Lombok.
 
 ## Installation
-In the beggining of instalation you need to install java 11+ and maven
+In the beggining of instalation you need to install java 14 and maven
 
 [Maven](https://maven.apache.org/download.cgi)
 
