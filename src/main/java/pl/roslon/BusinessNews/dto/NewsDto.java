@@ -13,8 +13,6 @@ public class NewsDto {
 
     @Override
     public String toString() {
-        return "NewsDto{" +
-                "articles=" + Arrays.toString(articles) +
-                '}';
+        return Arrays.toString(articles);
     }
 }
