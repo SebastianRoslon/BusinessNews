@@ -1,4 +1,4 @@
-##Note
+##BusinessNews
 
 BusinessNews is a recruitment task. It takes business news from
 https://newsapi.org and save it to file.
