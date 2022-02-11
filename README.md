@@ -7,7 +7,7 @@ Application is using Java 14, Spring Boot, Maven, Lombok.
 
 ##Running the service
 
-First step in clone the Git repository:
+First step is clone the Git repository:
 
 $ git clone https://github.com/SebastianRoslon/BusinessNews $ cd BusinessNews
 
